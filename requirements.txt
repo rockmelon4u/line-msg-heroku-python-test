@@ -1,2 +1,5 @@
 Flask
 line-bot-sdk
+BeautifulSoup
+datetime
+timedelta

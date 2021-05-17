@@ -48,7 +48,7 @@ def handle_message(event):
     # if msg_from_user == 'ㅇ':
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=crawling.crawling())
+        TextSendMessage(text=crawling.crawling()))
 
 if __name__ == "__main__":
 #    app.run()

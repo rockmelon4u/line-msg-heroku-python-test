@@ -1,5 +1,6 @@
 from flask import Flask, request, abort
 import os
+import crawling
 
 from linebot import (
     LineBotApi, WebhookHandler
@@ -47,7 +48,7 @@ def handle_message(event):
     # if msg_from_user == 'ㅇ':
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=event.message.text))
+        TextSendMessage(text=crawling.crawling())
 
 if __name__ == "__main__":
 #    app.run()

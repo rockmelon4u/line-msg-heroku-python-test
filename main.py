@@ -43,11 +43,11 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    msg_from_user = event.message.text
-    if msg_from_user == 'ㅇ':
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text=event.message.text))
+    # msg_from_user = event.message.text
+    # if msg_from_user == 'ㅇ':
+    line_bot_api.reply_message(
+        event.reply_token,
+        TextSendMessage(text=event.message.text))
 
 if __name__ == "__main__":
 #    app.run()

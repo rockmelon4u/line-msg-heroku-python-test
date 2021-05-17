@@ -1,5 +1,6 @@
 from flask import Flask, request, abort
 import os
+import crawling
 
 from linebot import (
     LineBotApi, WebhookHandler
@@ -19,7 +20,7 @@ USER_ID = os.environ["USER_ID"]
 line_bot_api = LineBotApi(LINE_CHANNEL_ACCESS_TOKEN)
 
 def main():
-    pushText = TextSendMessage(text="1")
+    pushText = TextSendMessage(text=crawling.crawling())
     line_bot_api.push_message(USER_ID, messages=pushText)
 
 if __name__ == "__main__":
